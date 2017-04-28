@@ -1,7 +1,7 @@
 {
   "services": [
     {
-      "name": "MyDB",
+      "name": "DevOpsDB",
       "type": "DBAAS",
       "username": "employee",
       "password": "employee"

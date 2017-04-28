@@ -99,10 +99,12 @@ Once you've created the Maven `settings.xml` and `setting-security.xml` files an
 ![Source Control](images/build3.png "Source Control")
 7. Select the project Git repository in the URL drop down.
 8. Go to the build's `Triggers` tab and select `Based on SCM polling schedule`.
+9. Go to the build's `Environment\` tab and select `Connect Oracle Maven Repository`. Enter your OTN crendentials.
+![Environment](images/environment.png "Environment") 
 9. Go to the build's `Build Steps` tab.
 10. Click `Add Build Step` and select `Invoke Maven 3`.
-11. Set the `Goal` to `-Dsettings.security=mvn/settings-security.xml -s mvn/settings.xml clean package`.  Note the use of the **package** goal--not `install`.
-![Invoke Maven 3 `--settings=mvn/settings.xml clean package`](images/build6a.png "--settings=mvn/settings.xml clean package")
+11. Set the `Goal` to `clean package`. 
+![Invoke Maven 3](images/build6a.png "clean package")
 12. Go to the build's `Post Build` tab.
 13. Click `Archive the artifacts`.
 14. Set the `Files To Archive` to `**/target/*.zip`.
